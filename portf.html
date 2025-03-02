@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aakarshit Thakur's portfolio showcasing projects, information, contact form, and FAQs.">
+    <title>Aakarshit Thakur | Portfolio</title>
+    <link rel="stylesheet" href="stle.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <p class="hed">Aakarshit Thakur</p>
+            <nav>
+                <ul>
+                    <li><a href="#info">! Info</a></li>
+                    <li><a href="#projects">⫸ Projects</a></li>
+                    <li><a href="#contact">💌 Contact</a></li>
+                    <li><a href="#faq">?? FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Color change buttons -->
+    <div class="color-buttons">
+        <button class="color-btn" onclick="changeColorScheme('default')">Default Theme</button>
+        <button class="color-btn" onclick="changeColorScheme('pink')">Pink Theme</button>
+        <button class="color-btn" onclick="changeColorScheme('blue')">Blue Theme</button>
+        <button class="color-btn" id="randomColorBtn">Random Color</button>
+    </div>
+
+
+    <main class="main-section">
+
+
+        <section id="info" class="infor">
+            <h1>Info</h1>
+            <p>Learn more about my background and skills.</p>
+        </section>
+
+        <section id="projects" class="pro">
+            <h1>Projects</h1>
+            <p>Explore my recent works and projects here.</p>
+        </section>
+
+        <section id="contact" class="con">
+            <h1>Contact</h1>
+            <p>Feel free to reach out to me through the form below:</p>
+            <form action="#!" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
+
+                <button class="sub" type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="faq" class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <p>Coming soon...</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aakarshit Thakur. All rights reserved.</p>
+    </footer>
+
+    <script src="jaav.js"></script>
+</body>
+
+</html>
