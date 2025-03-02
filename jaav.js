@@ -1,4 +1,4 @@
- // Function to change color scheme
+// Function to change color scheme
  function changeColorScheme(scheme) {
     if (scheme === 'blue') {
         document.documentElement.style.setProperty('--primary-color', '#007BFF');  // Blue
@@ -44,7 +44,6 @@ function getRandomColor() {
         { primary: '#28a745', background: '#003d0e', buttonBg: '#003d0e', buttonBorder: '#28a745', link: '#28a745' },  // Green
         { primary: '#ff6347', background: '#ffcccb', buttonBg: '#ffcccb', buttonBorder: '#ff6347', link: '#ff6347' },  // Tomato Red
         { primary: '#FF4500', background: '#FF7F50', buttonBg: '#FF7F50', buttonBorder: '#FF4500', link: '#FF4500' },  // Orange Red
-        { primary: '#8A2BE2', background: '#7A4B9A', buttonBg: '#7A4B9A', buttonBorder: '#8A2BE2', link: '#8A2BE2' },  // Blue Violet
         { primary: '#FF1493', background: '#FF69B4', buttonBg: '#FF69B4', buttonBorder: '#FF1493', link: '#FF1493' },  // Deep Pink
         { primary: '#FFD700', background: '#FF8C00', buttonBg: '#FF8C00', buttonBorder: '#FFD700', link: '#FFD700' },  // Gold
         { primary: '#DC143C', background: '#FFB6C1', buttonBg: '#FFB6C1', buttonBorder: '#DC143C', link: '#DC143C' },  // Crimson
