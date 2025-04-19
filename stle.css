@@ -1,254 +1,293 @@
 /* Global variables for colors */
 :root {
-    --primary-color: #26bd00;
-    --background-color: #000;
-    --text-color: #333;
-    --button-bg-color: #000;
-    --button-border-color: #26bd00;
-    --link-color: #26bd00;
-    --hover-link-color: #000;
+  --primary-color: #26bd00;
+  --background-color: #000;
+  --text-color: #ffffff; /* Changed to white for better contrast in Default theme */
+  --button-bg-color: #000;
+  --button-border-color: #26bd00;
+  --link-color: #26bd00;
+  --hover-link-color: #000;
 }
 
 /* Global body styles */
 body {
-    font-family: 'Monospaced', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
+  font-family: 'Courier New', Courier, monospace; /* Replaced 'Monospaced' with valid font */
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  margin-left: 160px; /* Merged with second body rule */
 }
 
 /* Header text (name) typing effect */
 .hed {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 70px;
-    color: var(--primary-color);
-    margin: 5px;
-    text-align: left;
-    overflow: hidden;
-    border-right: 10px solid var(--primary-color);
-    white-space: nowrap;
-    letter-spacing: 5px;
-    animation: typing 6s steps(30, end), blink-caret 0.5s step-end infinite;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 70px;
+  color: var(--primary-color);
+  margin: 5px;
+  text-align: left;
+  overflow: hidden;
+  border-right: 10px solid var(--primary-color);
+  white-space: nowrap;
+  letter-spacing: 5px;
+  animation: typing 6s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
 /* Typing effect and cursor animation */
 @keyframes typing {
-    from { width: 0; }
-    to { width: 70%; }
+  from { width: 0; }
+  to { width: 70%; }
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: var(--primary-color); }
+  from, to { border-color: transparent; }
+  50% { border-color: var(--primary-color); }
 }
 
 /* Header styles */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: var(--background-color);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--background-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 header nav ul {
-    background-color: var(--background-color);
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
-    color: var(--primary-color);
-    margin: 0;
-    list-style: none;
-    padding: 0;
+  background-color: var(--background-color);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  color: var(--primary-color);
+  margin: 0;
+  list-style: none;
+  padding: 0;
 }
 
 header nav ul li {
-    display: inline;
-    margin: 0 10px;
+  display: inline;
+  margin: 0 10px;
 }
 
 header nav ul li a {
-    text-decoration: none;
-    color: var(--primary-color);
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: var(--hover-link-color);
+  color: var(--hover-link-color);
 }
 
 /* Buttons to change color theme */
 .color-buttons {
-    display: flex;
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: flex-start; /* Align the buttons to the left */
-    justify-content: flex-start; /* Align buttons at the top */
-    position: fixed; /* Fixed position on the screen */
-    left: 0; /* Align the buttons to the left edge */
-    top: 50%; /* Position the buttons vertically centered */
-    transform: translateY(-50%); /* Adjust for exact centering */
-    z-index: 1000; /* Make sure it's on top of other content */
-    background-color: transparent; /* Fully transparent background */
-    padding: 10px;
-    border-radius: 10px; /* Rounded corners */
-    border: none; /* Remove any border from the container */
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: flex-start; /* Align the buttons to the left */
+  justify-content: flex-start; /* Align buttons at the top */
+  position: fixed; /* Fixed position on the screen */
+  left: 0; /* Align the buttons to the left edge */
+  top: 50%; /* Position the buttons vertically centered */
+  transform: translateY(-50%); /* Adjust for exact centering */
+  z-index: 1000; /* Make sure it's on top of other content */
+  background-color: transparent; /* Fully transparent background */
+  padding: 10px;
+  border-radius: 10px; /* Rounded corners */
+  border: none; /* Remove any border from the container */
 }
 
 .color-btn {
-    padding: 12px 20px;
-    color: var(--primary-color);
-    background-color: var(--button-bg-color); /* Solid background for button */
-    border: 2px solid var(--button-border-color); /* Solid border */
-    font-family: 'Courier New', Courier, monospace;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 5px;
-    text-align: center; /* Center the text within buttons */
-    margin-bottom: 10px; /* Space between buttons */
+  padding: 12px 20px;
+  color: var(--primary-color);
+  background-color: var(--button-bg-color); /* Solid background for button */
+  border: 2px solid var(--button-border-color); /* Solid border */
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+  text-align: center; /* Center the text within buttons */
+  margin-bottom: 10px; /* Space between buttons */
 }
 
 /* Hover effect for the button */
 .color-btn:hover {
-    color: var(--hover-link-color);
-    background-color: var(--primary-color);
-    border: 2px solid var(--primary-color); /* Ensure border changes on hover */
+  color: var(--hover-link-color);
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color); /* Ensure border changes on hover */
 }
 
-/* Make space on the left for buttons */
-body {
-    margin-left: 160px; /* Ensure content doesn't overlap with buttons, adjust as needed */
-}
-
-/* Sections styling */
 /* Sections styling */
 .pro, .infor, .con {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 35px;
-    color: var(--primary-color);
-    padding: 20px;
-    margin-bottom: 20px;
-    
-    /* Border for the sections */
-    border: 3px solid var(--primary-color);  /* Solid border */
-    border-radius: 8px;  /* Rounded corners */
-    background-color: var(--background-color);
-    transition: border-color 0.3s ease; /* Smooth transition for border color */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 35px;
+  color: var(--primary-color);
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 3px solid var(--primary-color); /* Solid border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: var(--background-color);
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
 }
 
 /* Add hover effect to sections */
 .pro:hover, .infor:hover, .con:hover {
-    border-color: var(--button-border-color);  /* Change border color on hover */
+  border-color: var(--button-border-color); /* Change border color on hover */
 }
-
 
 /* Form styling */
 form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 form label {
-    color: var(--primary-color);
-    margin-bottom: 5px;
+  color: var(--primary-color);
+  margin-bottom: 5px;
 }
 
 form input, form textarea {
-    background-color: var(--background-color);
-    color: var(--primary-color);
-    border: 5px solid var(--primary-color);
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 10px;
-    transition: border-color 0.3s ease;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  border: 5px solid var(--primary-color);
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease;
 }
 
 form input:focus, form textarea:focus {
-    border-color: #00ff00;  /* Highlighted border on focus */
-    outline: none;
+  border-color: #26bd00; /* Highlighted border on focus */
+  outline: none;
 }
 
 /* Submit button styling */
 .sub {
-    color: var(--primary-color);
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 30px;
-    background-color: var(--background-color);
-    border: 3px solid var(--primary-color);
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  color: var(--primary-color);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+  background-color: var(--background-color);
+  border: 3px solid var(--primary-color);
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .sub:hover {
-    color: #000;
-    background-color: var(--primary-color);
-    transform: scale(1.03);
+  color: #000;
+  background-color: var(--primary-color);
+  transform: scale(1.03);
 }
 
 /* Footer styles */
 footer {
-    color: var(--primary-color);
-    text-align: center;
-    padding: 20px;
-    background-color: var(--background-color);
-    border-top: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  text-align: center;
+  padding: 20px;
+  background-color: var(--background-color);
+  border-top: 1px solid var(--primary-color);
 }
 
 /* Section headers */
 h2 {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
-
 
 /* Link styles */
 a {
-    display: inline-block;
-    padding: 10px 20px;
-    color: var(--link-color); /* Use the same primary link color */
-    background-color: var(--background-color); /* Background color (matches the theme) */
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-    border: 2px solid transparent; /* Default transparent border */
-    position: relative; /* Needed for animation */
+  display: inline-block;
+  padding: 10px 20px;
+  color: var(--link-color); /* Use the same primary link color */
+  background-color: var(--background-color); /* Background color (matches the theme) */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  border: 2px solid transparent; /* Default transparent border */
+  position: relative; /* Needed for animation */
 }
 
 /* Hover effect with animation */
 a:hover {
-    color: var(--hover-link-color); /* On hover, change to the hover link color */
-    background-color: var(--primary-color); /* On hover, background changes to primary color */
-    transform: scale(1.5); /* Slightly scale the button on hover */
-    border-color: var(--primary-color); /* On hover, change border color to match primary color */
-    transition: all 0.3s ease; /* Apply smooth transition to all properties */
+  color: var(--hover-link-color); /* On hover, change to the hover link color */
+  background-color: var(--primary-color); /* On hover, background changes to primary color */
+  transform: scale(1.5); /* Slightly scale the button on hover */
+  border-color: var(--primary-color); /* On hover, change border color to match primary color */
+  transition: all 0.3s ease; /* Apply smooth transition to all properties */
 }
+
 /* Container for the links */
 nav ul {
-    display: flex;
-    gap: 30px; /* Adjust this value to control the gap between the links */
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  display: flex;
+  gap: 30px; /* Adjust this value to control the gap between the links */
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
+
 /* Left entering animation */
 @keyframes leftEnter {
-    from {
-        transform: translateX(-100%); /* Start off the screen to the left */
-        opacity: 0; /* Start as transparent */
-    }
-    to {
-        transform: translateX(0); /* Move into place */
-        opacity: 1; /* Fully visible */
-    }
+  from {
+      transform: translateX(-100%); /* Start off the screen to the left */
+      opacity: 0; /* Start as transparent */
+  }
+  to {
+      transform: translateX(0); /* Move into place */
+      opacity: 1; /* Fully visible */
+  }
 }
 
 /* Apply the animation */
 .animate-left {
-    opacity: 0; /* Initial state - fully transparent */
-    animation: leftEnter 2s ease-out forwards; /* Apply the left-entering animation */
+  opacity: 0; /* Initial state - fully transparent */
+  animation: leftEnter 2s ease-out forwards; /* Apply the left-entering animation */
 }
+
+/* Project entry styling */
+.project-entry {
+  padding: 15px;
+  margin-top: 15px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  background-color: var(--background-color);
+  transition: border-color 0.3s ease;
+}
+
+.project-entry:hover {
+  border-color: var(--button-border-color);
+}
+
+.project-entry h3 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 24px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.project-entry p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  color: var(--text-color, #ffffff); /* Explicitly use --text-color with white fallback */
+  margin-bottom: 10px;
+}
+
+/* Project link styling */
+.project-link {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  color: var(--link-color);
+  background-color: var(--background-color);
+  border: 2px solid var(--primary-color);
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 5px;
  
+}
+
+.project-link:hover {
+  color: var(--hover-link-color);
+  background-color: var(--primary-color);
+  transform: scale(1.05);
+}
